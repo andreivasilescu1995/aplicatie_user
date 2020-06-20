@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controllers.SettingsFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="@string/location"
+        android:textSize="17sp"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        style="@style/Divider.Horizontal"
+        android:layout_marginBottom="3dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/label_update_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="@string/settings_update_timer"/>
+        <EditText
+            android:id="@+id/edit_update_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/label_update_interval"
+            android:layout_centerVertical="true"
+            android:inputType="number"
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        style="@style/Divider.Horizontal"
+        android:layout_marginBottom="3dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="17sp"
+        android:text="@string/menu_payment"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        style="@style/Divider.Horizontal"
+        android:layout_marginBottom="3dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:id="@+id/label_device_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/settings_collect_device_data"/>
+
+        <CheckBox
+            android:id="@+id/check_device_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/label_device_data"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp">
+        <TextView
+            android:id="@+id/label_mask_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="@string/settings_hide_card"/>
+        <CheckBox
+            android:id="@+id/check_mask_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/label_mask_card"
+            android:padding="5dp"
+            android:layout_centerVertical="true" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
+        <TextView
+            android:id="@+id/label_mask_cvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="@string/settings_hide_cvv"/>
+        <CheckBox
+            android:id="@+id/check_mask_cvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/label_mask_cvv"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
+        <TextView
+            android:id="@+id/label_vault_payments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="@string/settings_save_payments"/>
+        <CheckBox
+            android:id="@+id/check_vault_payments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/label_vault_payments"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

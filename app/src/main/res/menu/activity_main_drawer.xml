@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="@string/menu_maps" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_payment_black_24dp"
+            android:title="@string/menu_payment" />
+
+        <item
+            android:id="@+id/nav_payment_history"
+            android:icon="@drawable/bt_ic_vaulted_paypal"
+            android:title="@string/menu_payment_history"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/settings_group">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/menu_settings"/>
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="@string/menu_about"/>
+    </group>
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Rute"
+        app:showAsAction="always">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/route_5_40"
+                    android:title="5-40"
+                    android:checkable="true"
+                    android:checked="true" />
+                <item
+                    android:id="@+id/route_test"
+                    android:title="route_test"
+                    android:checkable="true" />
+            </group>
+        </menu>
+    </item>
+</menu>

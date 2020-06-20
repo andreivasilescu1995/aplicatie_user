@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">aplicatie_user</string>
+
+    <string name="menu_maps">Locație</string>
+    <string name="menu_payment">Plăti</string>
+    <string name="menu_payment_history">Istoric plăti</string>
+    <string name="menu_settings">Setări</string>
+    <string name="menu_about">Despre</string>
+
+    <!-- fragment payment -->
+    <string name="one_ticket">calatorie</string>
+    <string name="more_tickets">calatorii</string>
+    <string name="label_cost">Cost</string>
+    <string name="currency">€</string>
+
+    <!-- payment row -->
+    <string name="label_id">ID</string>
+    <string name="label_time_stamp">Data</string>
+    <string name="subscription">Abonament 30 de zile</string>
+    <string name="subscription_route">valabil pe orice rută</string>
+
+    <!--    mesaje ProgressDialog-->
+    <string name="getting_payments">Preluare plăți</string>
+    <string name="getting_token">Preluare token</string>
+
+
+    <!-- fragment checkout -->
+    <string name="checkout_title">Confirmare plată</string>
+    <string name="ok">Confirmă</string>
+    <string name="cancel">Anulează</string>
+
+    <string name="progress_bar_default_message">Loading</string>
+
+    <string name="no_payment_history">Nici o plată efectuată!</string>
+
+    <!--    fragment settings-->
+    <string name="location">Locație</string>
+    <string name="settings_update_timer">Interval update locație (secunde)</string>
+    <string name="settings_collect_device_data">Colectează informații despre device</string>
+    <string name="settings_hide_card">Ascunde numărul cardului</string>
+    <string name="settings_hide_cvv">Ascunde codul de securitate</string>
+    <string name="settings_save_payments">Salvarea metodelor de plată</string>
+
+    <!--    fragment about-->
+    <string name="about_link"><a href='https://github.com/andreivasilescu1995'>Github source</a></string>
+    <string name="about_sign">"@Vasilescu Andrei"</string>
+
+</resources>
