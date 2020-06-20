@@ -55,9 +55,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
         super.onPrepareOptionsMenu(menu);
         view.setRoute_5_40(menu.findItem(R.id.route_5_40));
         view.setRoute_test(menu.findItem(R.id.route_test));
-
         model.setSelectedRoute("5-40");
-
         view.getRoute_5_40().setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -73,7 +71,6 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
                     RequestQueueSingleton.getInstance(LocationFragment.context).getRequestQueue().cancelAll("LocationFragment");
                     updateBusLocation();
                 }
-
                 return false;
             }
         });
@@ -86,7 +83,6 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
                 model.setSelectedRoute("route_test");
                 view.getPolyline().remove();
                 view.setPolyline(view.getMap().addPolyline(Routes.route_test_pline));
-
                 if (view.getBusMarker() != null) {
                     view.getBusMarker().remove();
                     view.setBusMarker(null);
