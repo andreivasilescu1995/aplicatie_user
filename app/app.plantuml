@@ -1,0 +1,272 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace com.aplicatie.user {
+    class com.aplicatie.user.BuildConfig {
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    class com.aplicatie.user.MainActivity {
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      class com.aplicatie.user.controllers.AboutFragment {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      class com.aplicatie.user.controllers.DelayedProgressDialog {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      class com.aplicatie.user.controllers.ErrorDialog {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      class com.aplicatie.user.controllers.ErrorFragment {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      class com.aplicatie.user.controllers.SettingsFragment {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      namespace location {
+        class com.aplicatie.user.controllers.location.LocationFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      namespace payment {
+        class com.aplicatie.user.controllers.payment.CheckoutDialogFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      namespace payment {
+        class com.aplicatie.user.controllers.payment.PaymentFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      namespace payment {
+        namespace istory {
+          class com.aplicatie.user.controllers.paymentHistory.PaymentHistoryAdapter {
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace controllers {
+      namespace payment {
+        namespace istory {
+          class com.aplicatie.user.controllers.paymentHistory.PaymentHistoryFragment {
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace misc_objects {
+      class com.aplicatie.user.misc_objects.Constants {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace misc_objects {
+      class com.aplicatie.user.misc_objects.RequestQueueSingleton {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace misc_objects {
+      class com.aplicatie.user.misc_objects.Routes {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace misc_objects {
+      class com.aplicatie.user.misc_objects.StaticMethods {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace models {
+      class com.aplicatie.user.models.CreditCard {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace models {
+      class com.aplicatie.user.models.CustomerId {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace models {
+      class com.aplicatie.user.models.LocationModel {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace models {
+      class com.aplicatie.user.models.Payment {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace models {
+      class com.aplicatie.user.models.PaymentHistoryModel {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace models {
+      class com.aplicatie.user.models.PaymentModel {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace models {
+      class com.aplicatie.user.models.StoredPayments {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace models {
+      class com.aplicatie.user.models.Ticket {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace views {
+      class com.aplicatie.user.views.LocationView {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace views {
+      class com.aplicatie.user.views.PaymentHistoryView {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace views {
+      class com.aplicatie.user.views.PaymentView {
+      }
+    }
+  }
+  
+
+  namespace com.aplicatie.user {
+    namespace views {
+      class com.aplicatie.user.views.RecyclerViewDecorator {
+      }
+    }
+  }
+  
+
+  com.aplicatie.user.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.aplicatie.user.controllers.AboutFragment -up-|> androidx.fragment.app.DialogFragment
+  com.aplicatie.user.controllers.DelayedProgressDialog -up-|> androidx.fragment.app.DialogFragment
+  com.aplicatie.user.controllers.ErrorDialog -up-|> androidx.fragment.app.DialogFragment
+  com.aplicatie.user.controllers.ErrorFragment -up-|> androidx.fragment.app.DialogFragment
+  com.aplicatie.user.controllers.SettingsFragment -up-|> androidx.fragment.app.Fragment
+  com.aplicatie.user.controllers.location.LocationFragment .up.|> com.google.android.gms.maps.OnMapReadyCallback
+  com.aplicatie.user.controllers.location.LocationFragment -up-|> androidx.fragment.app.Fragment
+  com.aplicatie.user.controllers.location.LocationFragment o-- com.aplicatie.user.models.LocationModel : model
+  com.aplicatie.user.controllers.location.LocationFragment o-- com.aplicatie.user.views.LocationView : view
+  com.aplicatie.user.controllers.payment.CheckoutDialogFragment -up-|> androidx.fragment.app.DialogFragment
+  com.aplicatie.user.controllers.payment.PaymentFragment -up-|> androidx.fragment.app.Fragment
+  com.aplicatie.user.controllers.payment.PaymentFragment o-- com.aplicatie.user.models.PaymentModel : model
+  com.aplicatie.user.controllers.payment.PaymentFragment o-- com.aplicatie.user.views.PaymentView : view
+  com.aplicatie.user.controllers.paymentHistory.PaymentHistoryAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.aplicatie.user.controllers.paymentHistory.PaymentHistoryFragment -up-|> androidx.fragment.app.Fragment
+  com.aplicatie.user.controllers.paymentHistory.PaymentHistoryFragment o-- com.aplicatie.user.controllers.paymentHistory.PaymentHistoryAdapter : adapter
+  com.aplicatie.user.controllers.paymentHistory.PaymentHistoryFragment o-- com.aplicatie.user.models.PaymentHistoryModel : model
+  com.aplicatie.user.controllers.paymentHistory.PaymentHistoryFragment o-- com.aplicatie.user.views.PaymentHistoryView : view
+  com.aplicatie.user.models.Payment o-- com.aplicatie.user.models.CreditCard : creditCard
+  com.aplicatie.user.models.Payment o-- com.aplicatie.user.models.Ticket : ticket
+  com.aplicatie.user.views.PaymentHistoryView o-- com.aplicatie.user.controllers.DelayedProgressDialog : progressDialog
+  com.aplicatie.user.views.PaymentView o-- com.aplicatie.user.controllers.DelayedProgressDialog : progressDialog
+  com.aplicatie.user.views.RecyclerViewDecorator -up-|> androidx.recyclerview.widget.RecyclerView.ItemDecoration
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
